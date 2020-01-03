@@ -1,3 +1,4 @@
 name = Handshake Feeds
 description = Provide a clean display of Handshake RSS feeds per category
 core = 7.x
+package = College of Engineering
