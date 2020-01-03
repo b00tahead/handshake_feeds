@@ -1,1 +1,35 @@
 <?php
+// Problems to solve
+// set up a configuration form to get a list of RSS feeds
+// figure out how to create a view or block to 
+
+/**
+ * Implements hook_block_info().
+ */
+function handshake_feeds_block_info() {
+    $blocks['test block'] = array(
+        // The name that will appear in the block list
+        'info' => t('Testing Handshake Feed'),
+        // Default setting.
+        'cache' => DRUPAL_CACHE_PER_ROLE,
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function handshake_feeds_menu() {
+    $items = array();
+
+    $items['admin/config/services/handshake_feeds'] = array(
+        'title' => 'Handshake Feeds',
+        'description' => 'Configure Handshake feeds settings.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('handshake_feeds_configure'),
+        'access arguments' => array('access administration pages'),
+        'file' => 'handshake_feeds.admin.inc',
+      );
+
+    return $items;
+}
