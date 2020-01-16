@@ -1,5 +1,6 @@
 <?php
 
+// TODO: Create form
 function handshake_feeds_configure($form, &$form_state) {
     $form['feeds_list'] = array(
         '#title' => t("Add new Handshake feed."),
@@ -34,3 +35,19 @@ function handshake_feeds_configure($form, &$form_state) {
       );
     return $form;
 }
+
+// TODO: Validate the data
+/**
+ * Implements validation from the Form API
+ * 
+ * @param $form
+ *  A structured array containing the elements and properties of the form.
+ * @param $form_state
+ *  An array that stores information about the form's current state during processing
+ */
+function handshake_feeds_form_validate($form, &$form_state) {
+    // TODO: Actually validate for RSS feed url
+    $url = $form_state['values']['url'];
+}
+
+// TODO: Save to DB

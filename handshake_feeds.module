@@ -1,19 +1,11 @@
 <?php
-// Problems to solve
-// set up a configuration form to get a list of RSS feeds
-// figure out how to create a view or block to 
 
+// TODO: Set up permissions
 /**
- * Implements hook_block_info().
+ * Implements hook_permission(). 
  */
-function handshake_feeds_block_info() {
-    $blocks['test block'] = array(
-        // The name that will appear in the block list
-        'info' => t('Testing Handshake Feed'),
-        // Default setting.
-        'cache' => DRUPAL_CACHE_PER_ROLE,
-    );
-    return $blocks;
+function handshake_feeds_permission() {
+
 }
 
 /**
